@@ -13,14 +13,12 @@ Il recap dei dati e l'output del prezzo finale va stampato in pagina (formattato
 let passengerName = document.querySelector('#nome');
 console.log(passengerName)
 
-// ° Prendo elemento KM'
-let km = document.querySelector('#km');
-km = parseInt(km);
+// ° Prendo elemento KM
+const km = document.querySelector('#km');
 console.log(km)
 
-// ° Prendo elemento eta'
-let passengerAge = parseInt(document.querySelector('#age'));
-passengerAge = parseInt(passengerAge);
+// ° Prendo elemento AGE
+let passengerAge = document.querySelector('#age');
 console.log(passengerAge)
 
 // ° Prendo elemento Button "Genera"
@@ -31,17 +29,19 @@ console.log(genera)
 
 let discountValue = 0;
 
-generaBtn.addEventListener('click', function () {
-    let totalPrice = km.value * 0.21;
-    console.log(totalPrice)
+generaBtn.addEventListener('click', function () {    
+    const kmValue = parseInt(km.value);
+    let totalPrice = kmValue * 0.21;    
     // & Calcolare eventuali sconti del viaggio
-    if (passengerAge.value < 18){              
+    if (passengerAge.value === 'minorenne'){              
         discountValue = (totalPrice / 100) * 20;
         totalPrice = totalPrice - discountValue;
-    }  else if (passengerAge.value > 65){              
+    }  else if (passengerAge.value === 'over-65'){              
         discountValue = (totalPrice / 100) * 40;
         totalPrice = totalPrice - discountValue;
     }
+    console.log(passengerAge.value)
+    console.log(totalPrice)
 });
 
 
