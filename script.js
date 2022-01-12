@@ -29,6 +29,9 @@ console.log(genera)
 let annullaBtn = document.querySelector('#annulla');
 console.log(annullaBtn)
 
+// ° Prendo elemento in cui stampare preventivo
+const preventivo = document.getElementById('preventivo');
+
 // ° Calcolare il prezzo totale del viaggio
 
 let discountValue = 0;
@@ -47,6 +50,13 @@ generaBtn.addEventListener('click', function () {
     const finalPrice = totalPrice.toFixed(2); 
     console.log(passengerAge.value)
     console.log(finalPrice)
+    preventivo.innerHTML = `        
+<div id="stampa-nome">Nome passeggero: ${passengerName.value}</div>
+<div id="offerta">Biglietto Standard</div>
+<div id="carrozza">3</div>
+<div id="codice-treno">556789</div>
+<div id="costo">${finalPrice}</div>
+`;
 });
 
 // ° Cancellare tutti i dati inseriti
@@ -60,16 +70,3 @@ annullaBtn.addEventListener('click', function () {
 
 
 
-
-
-
-
-// // Recupero elementi da sampare in pagina
-// const kmElement = document.getElementById('km');
-// const ageElement = document.getElementById('age');
-// const priceElement = document.getElementById('price');
-
-// // Stampo in pagina
-// kmElement.innerHTML = `Chilometri biglietto: ${kmRun}`;
-// ageElement.innerHTML = `Et&agrave; passeggero: ${passengerAge}`;
-// priceElement.innerHTML = `Prezzo: € ${finalPrice}`;
