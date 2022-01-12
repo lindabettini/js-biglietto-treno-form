@@ -14,7 +14,7 @@ let passengerName = document.querySelector('#nome');
 console.log(passengerName)
 
 // ° Prendo elemento KM
-const km = document.querySelector('#km');
+let km = document.querySelector('#km');
 console.log(km)
 
 // ° Prendo elemento AGE
@@ -25,14 +25,16 @@ console.log(passengerAge)
 let generaBtn = document.querySelector('#genera');
 console.log(genera)
 
+// ° Prendo elemento Button "Annulla"
+let annullaBtn = document.querySelector('#annulla');
+console.log(annullaBtn)
+
 // ° Calcolare il prezzo totale del viaggio
 
 let discountValue = 0;
 
-
-
 generaBtn.addEventListener('click', function () {    
-    const kmValue = parseInt(km.value);
+    let kmValue = parseInt(km.value);
     let totalPrice = kmValue * 0.21;      
     // & Calcolare eventuali sconti del viaggio
     if (passengerAge.value === 'minorenne'){              
@@ -47,7 +49,10 @@ generaBtn.addEventListener('click', function () {
     console.log(finalPrice)
 });
 
-
+annullaBtn.addEventListener('click', function () {    
+    passengerName.innerHTML = ``;
+    km.innerHTML = ``;
+});
 
 
 // // Recupero elementi da sampare in pagina
