@@ -49,10 +49,19 @@ generaBtn.addEventListener('click', function () {
     console.log(finalPrice)
 });
 
+// ° Cancellare tutti i dati inseriti
+
 annullaBtn.addEventListener('click', function () {    
-    passengerName.innerHTML = ``;
-    km.innerHTML = ``;
+    passengerName.value = '';
+    km.value = '';
+    passengerAge.value = '';
 });
+
+
+
+
+
+
 
 
 // // Recupero elementi da sampare in pagina
