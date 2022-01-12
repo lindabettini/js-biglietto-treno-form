@@ -55,7 +55,7 @@ generaBtn.addEventListener('click', function () {
 <div id="offerta">Biglietto Standard</div>
 <div id="carrozza">3</div>
 <div id="codice-treno">556789</div>
-<div id="costo">${finalPrice}</div>
+<div id="costo">Il costo del biglietto è: &euro; ${finalPrice}</div>
 `;
 });
 
@@ -65,6 +65,7 @@ annullaBtn.addEventListener('click', function () {
     passengerName.value = '';
     km.value = '';
     passengerAge.value = '';
+    preventivo.innerHTML = ``;
 });
 
 
