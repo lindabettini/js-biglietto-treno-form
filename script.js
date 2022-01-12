@@ -50,12 +50,13 @@ generaBtn.addEventListener('click', function () {
     const finalPrice = totalPrice.toFixed(2); 
     console.log(passengerAge.value)
     console.log(finalPrice)
-    preventivo.innerHTML = `        
-<div id="stampa-nome">Nome passeggero: ${passengerName.value}</div>
-<div id="offerta">Biglietto Standard</div>
-<div id="carrozza">3</div>
-<div id="codice-treno">556789</div>
-<div id="costo">Il costo del biglietto è: &euro; ${finalPrice}</div>
+    preventivo.innerHTML = `
+        
+<div class="" id="stampa-nome"><strong>NOME PASSEGGERO</strong></br>${passengerName.value}</div>
+<div class="" id="offerta"><strong>Offerta</strong></br>Biglietto Standard</div>
+<div class="" id="carrozza"><strong>Carrozza</strong></br>10</div>
+<div class="" id="codice-treno"><strong>Codice CP</strong></br>556789</div>
+<div class="" id="costo"><strong>Costo biglietto</strong></br>Il costo del biglietto è: &euro; ${finalPrice}</div>
 `;
 });
 

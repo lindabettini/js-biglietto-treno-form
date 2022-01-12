@@ -12,31 +12,33 @@
 </head>
 
 <body>
-    <div id="form-calcolo-ticket" class="d-flex">
-        <div>
-            <label for="age">Inserisci nome e cognome</label> <br />
-            <input type="text" name="nome" id="nome" placeholder="Nome e cognome">
+    <div class="container">
+        <div id="form-calcolo-ticket" class="d-flex justify-content-between">
+            <div>
+                <label for="age">Inserisci nome e cognome</label> <br />
+                <input type="text" name="nome" id="nome" placeholder="Nome e cognome">
+            </div>
+            <div>
+                <label for="age">Inserisci kilomentri</label> <br />
+                <input type="text" name="km" id="km" placeholder="Numero km">
+            </div>
+            <div>
+                <label for="age">Seleziona fascia di eta'</label> <br />
+                <select name="age" id="age">
+                    <option value="">Seleziona eta'</option>
+                    <option value="minorenne">Minorenne</option>
+                    <option value="medium-age">18-64</option>
+                    <option value="over-65">Over 65</option>
+                </select>
+            </div>
         </div>
-        <div>
-            <label for="age">Inserisci kilomentri</label> <br />
-            <input type="text" name="km" id="km" placeholder="Numero km">
+        <div class="d-flex justify-content-center">
+            <button id="genera" class="m-3">Genera</button>
+            <button id="annulla" class="m-3">Annulla</button>
         </div>
-        <div>
-            <label for="age">Seleziona fascia di eta'</label> <br />
-            <select name="age" id="age">
-                <option value="">Seleziona eta'</option>
-                <option value="minorenne">Minorenne</option>
-                <option value="medium-age">18-64</option>
-                <option value="over-65">Over 65</option>
-            </select>
+        <!-- ~ STAMPA PREVENTIVO  -->
+        <div id="preventivo" class="d-flex justify-content-between">
         </div>
-    </div>
-    <div>
-        <button id="genera">Genera</button>
-        <button id="annulla">Annulla</button>
-    </div>
-    <!-- ~ STAMPA PREVENTIVO  -->
-    <div id="preventivo" class="d-flex">
     </div>
     <script src="script.js"></script>
 </body>
