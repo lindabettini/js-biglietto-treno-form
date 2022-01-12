@@ -29,9 +29,11 @@ console.log(genera)
 
 let discountValue = 0;
 
+
+
 generaBtn.addEventListener('click', function () {    
     const kmValue = parseInt(km.value);
-    let totalPrice = kmValue * 0.21;    
+    let totalPrice = kmValue * 0.21;      
     // & Calcolare eventuali sconti del viaggio
     if (passengerAge.value === 'minorenne'){              
         discountValue = (totalPrice / 100) * 20;
@@ -40,13 +42,13 @@ generaBtn.addEventListener('click', function () {
         discountValue = (totalPrice / 100) * 40;
         totalPrice = totalPrice - discountValue;
     }
+    const finalPrice = totalPrice.toFixed(2); 
     console.log(passengerAge.value)
-    console.log(totalPrice)
+    console.log(finalPrice)
 });
 
 
-// // Arrotondare prezzo finale 
-// let finalPrice = totalPrice.toFixed(2);
+
 
 // // Recupero elementi da sampare in pagina
 // const kmElement = document.getElementById('km');
