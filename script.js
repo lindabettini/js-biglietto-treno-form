@@ -86,9 +86,21 @@ generateBtn.addEventListener('click', function () {
 
 // // 9. Lego eventi a Reset Button
 resetBtn.addEventListener('click', function () {
+    // ° Resetto i valori iniziali
+    /*
+    ^ se non avessi classe 'form-field':
     nameField.value = '';
     kmsField.value = '';
     ageField.value = '';
+    ^ con classe 'form-field' creo una const "simil-array" e svuoto i valori con ciclo for: 
+    */
+    const fields = document.querySelectorAll('.form-field');
+
+    for (let i = 0; i < fields.length; i++){
+        const currentField = fields[i];
+        currentField.value = '';
+    }
+
     // ° Rendo di nuovo invisibile la sezione Quote
     quoteSection.classList.remove('visible');
 })
