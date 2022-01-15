@@ -9,28 +9,20 @@ va applicato uno sconto del 40% per gli over 65.
 Il recap dei dati e l'output del prezzo finale va stampato in pagina (formattato con massimo due decimali, per indicare centesimi sul prezzo). 
 */
 
-// ° Prendo elemento nome
-let passengerName = document.querySelector('#nome');
-console.log(passengerName)
+// ° FORMS ELEMENT
+const nameField = document.getElementById('#name');
+const kmsField = document.getElementById('#kms');
+const ageField = document.getElementById('#age');
+const generateBtn = document.getElementById('#generate-btn');
+const resetBtn = document.getElementById('#reset-btn');
 
-// ° Prendo elemento KM
-let km = document.querySelector('#km');
-console.log(km)
-
-// ° Prendo elemento AGE
-let passengerAge = document.querySelector('#age');
-console.log(passengerAge)
-
-// ° Prendo elemento Button "Genera"
-let generaBtn = document.querySelector('#genera');
-console.log(genera)
-
-// ° Prendo elemento Button "Annulla"
-let annullaBtn = document.querySelector('#annulla');
-console.log(annullaBtn)
-
-// ° Prendo elemento in cui stampare preventivo
-const preventivo = document.getElementById('preventivo');
+// ° TICKET ELEMENTS
+const quoteSection = document.getElementById('ticket-quote');
+const namePlaceholder = document.getElementById('passenger-name');
+const offerPlaceholder = document.getElementById('offer');
+const cpPlaceholder = document.getElementById('cp');
+const carriagePlaceholder = document.getElementById('carriage');
+const pricePlaceholder = document.getElementById('price');
 
 // ° Calcolare il prezzo totale del viaggio
 
