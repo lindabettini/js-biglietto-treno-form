@@ -26,7 +26,7 @@ const cpPlaceholder = document.getElementById('cp');
 const carriagePlaceholder = document.getElementById('carriage');
 const pricePlaceholder = document.getElementById('price');
 
-// // 2. Lego eventi ai bottoni
+// // 2. Lego eventi Generate Button
 
 generateBtn.addEventListener('click', function () {
 
@@ -69,15 +69,26 @@ generateBtn.addEventListener('click', function () {
         // // 6. Randomizzo Carrozza
         const carNumb = Math.floor(Math.random() * 12) + 1;
 
-        // // 6. Randomizzo il CP
+        // // 7. Randomizzo il CP
         // ^ Math.floor(Math.random() * (max - min)) + min
         // ^ casuale tra 900000 e 999999:
         const cpNumb = Math.floor(Math.random() * (100000 - 90000)) + 90000;
 
-        // // . Display results
+        // // 8. Display results
         namePlaceholder.innerText = nameValue;
         pricePlaceholder.innerText = '€' + ' ' + rate.toFixed(2);
         offerPlaceholder.innerText = rateCategory;
         carriagePlaceholder.innerText = carNumb;
         cpPlaceholder.innerText = cpNumb;
+        // ° Rendo visibile la sezione Quote
+        quoteSection.classList.add('visible');
+})
+
+// // 9. Lego eventi a Reset Button
+resetBtn.addEventListener('click', function () {
+    nameField.value = '';
+    kmsField.value = '';
+    ageField.value = '';
+    // ° Rendo di nuovo invisibile la sezione Quote
+    quoteSection.classList.remove('visible');
 })
