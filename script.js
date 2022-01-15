@@ -31,10 +31,26 @@ const pricePlaceholder = document.getElementById('price');
 generateBtn.addEventListener('click', function () {
 
         // // 3. Recupero i valori
-        const nameValue = nameField.value;
+        const nameValue = nameField.value.trim();
         const kmsValue = parseInt(kmsField.value);
         const ageValue = ageField.value;
-        console.log(nameValue, kmsValue, ageValue);
+        const allowedAges = ['minor', 'adult', 'over'];
+
+        // & VALIDAZIONE
+        if(!nameValue) {
+            alert('Il nome è obbligatorio');
+            return;
+        }
+
+        if(kmsValue < 0 || isNaN(kmsValue)) {
+            alert('I chilometri inseriti non sono validi');
+            return;
+        }
+
+        if(!allowedAges.includes(ageValue)) {
+            alert("L'eta' inserita non è valida");
+            return;
+        }
 
         // // 4. Calcolo prezzo base
         let rate = 0.21 * kmsValue;
