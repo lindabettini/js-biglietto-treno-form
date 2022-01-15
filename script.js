@@ -41,7 +41,6 @@ generateBtn.addEventListener('click', function () {
         let rateCategory;
 
         // // 5. Calcolo sconti
-
         switch(ageValue) {
             case 'minor':
                 rate *= 0.8;
@@ -56,7 +55,6 @@ generateBtn.addEventListener('click', function () {
                 rateCategory = 'Tariffa Ordinaria';
                 break;
         }
-
         /*
         ^ OPPURE CALCOLO SCONTO CON IF:
         if(ageValue === 'minor'){
@@ -68,7 +66,18 @@ generateBtn.addEventListener('click', function () {
         }
         */
 
-        // // 6. Display results
-        pricePlaceholder.innerText = '€' + ' ' + price.toFixed(2);
+        // // 6. Randomizzo Carrozza
+        const carNumb = Math.floor(Math.random() * 12) + 1;
+
+        // // 6. Randomizzo il CP
+        // ^ Math.floor(Math.random() * (max - min)) + min
+        // ^ casuale tra 900000 e 999999:
+        const cpNumb = Math.floor(Math.random() * (100000 - 90000)) + 90000;
+
+        // // . Display results
+        namePlaceholder.innerText = nameValue;
+        pricePlaceholder.innerText = '€' + ' ' + rate.toFixed(2);
         offerPlaceholder.innerText = rateCategory;
+        carriagePlaceholder.innerText = carNumb;
+        cpPlaceholder.innerText = cpNumb;
 })
