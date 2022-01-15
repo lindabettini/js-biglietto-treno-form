@@ -14,3 +14,7 @@
 #ticket-quote.visible {
   display: block;
 }
+
+.red-text {
+  color: red;
+}

@@ -38,17 +38,29 @@ generateBtn.addEventListener('click', function () {
 
         // & VALIDAZIONE
         if(!nameValue) {
-            alert('Il nome è obbligatorio');
+            const fieldContainer = document.getElementById('name-field-container');
+            const errorMessage = document.createElement('p');
+            errorMessage.classList.add('red-text');
+            errorMessage.innerText = 'Il nome è obbligatorio';
+            fieldContainer.appendChild(errorMessage);
             return;
         }
 
-        if(kmsValue < 0 || isNaN(kmsValue)) {
-            alert('I chilometri inseriti non sono validi');
+        if (isNaN(kmsValue) || kmsValue < 0) {
+            const fieldContainer = document.getElementById('kms-field-container');
+            const errorMessage = document.createElement('p');
+            errorMessage.classList.add('red-text');
+            errorMessage.innerText = 'I chilometri inseriti non sono validi';
+            fieldContainer.appendChild(errorMessage);
             return;
         }
 
-        if(!allowedAges.includes(ageValue)) {
-            alert("L'eta' inserita non è valida");
+        if (!allowedAges.includes(ageValue)) {
+            const fieldContainer = document.getElementById('age-field-container');
+            const errorMessage = document.createElement('p');
+            errorMessage.classList.add('red-text');
+            errorMessage.innerText = "L'eta' inserita non è valida";
+            fieldContainer.appendChild(errorMessage);
             return;
         }
 
