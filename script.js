@@ -37,6 +37,38 @@ generateBtn.addEventListener('click', function () {
         console.log(nameValue, kmsValue, ageValue);
 
         // // 4. Calcolo prezzo base
-        let price = 0.21 * kmsValue;
-        console.log(price);
+        let rate = 0.21 * kmsValue;
+        let rateCategory;
+
+        // // 5. Calcolo sconti
+
+        switch(ageValue) {
+            case 'minor':
+                rate *= 0.8;
+                // ^ oppure: rate = rate * 0.8; ^ oppure: rate = (rate / 100) * 20;
+                rateCategory = 'Tariffa Giovani';
+                break;
+            case 'over':
+                rate *= 0.6;
+                rateCategory = 'Tariffa Senior';
+                break;
+            default:
+                rateCategory = 'Tariffa Ordinaria';
+                break;
+        }
+
+        /*
+        ^ OPPURE CALCOLO SCONTO CON IF:
+        if(ageValue === 'minor'){
+            rate *= 0.8;
+            rateCategory = 'Tariffa Giovani'            
+        } else if(ageValue === 'over'){
+            rate *= 0.6;
+            rateCategory = 'Tariffa Senior'
+        }
+        */
+
+        // // 6. Display results
+        pricePlaceholder.innerText = '€' + ' ' + price.toFixed(2);
+        offerPlaceholder.innerText = rateCategory;
 })
