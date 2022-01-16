@@ -37,31 +37,35 @@ generateBtn.addEventListener('click', function () {
         const allowedAges = ['minor', 'adult', 'over'];
 
         // & VALIDAZIONE
+
+        let errorMessage;
+        let fieldContainer; 
+
         if(!nameValue) {
-            const fieldContainer = document.getElementById('name-field-container');
-            const errorMessage = document.createElement('p');
+            fieldContainer = document.getElementById('name-field-container');
+            errorMessage = document.createElement('p');
             errorMessage.classList.add('red-text');
             errorMessage.innerText = 'Il nome è obbligatorio';
             fieldContainer.appendChild(errorMessage);
-            return;
+            return            
         }
 
-        if (isNaN(kmsValue) || kmsValue < 0) {
-            const fieldContainer = document.getElementById('kms-field-container');
-            const errorMessage = document.createElement('p');
+        if (isNaN(kmsValue) || kmsValue <= 0) {
+            fieldContainer = document.getElementById('kms-field-container');
+            errorMessage = document.createElement('p');
             errorMessage.classList.add('red-text');
             errorMessage.innerText = 'I chilometri inseriti non sono validi';
             fieldContainer.appendChild(errorMessage);
-            return;
+            return              
         }
 
         if (!allowedAges.includes(ageValue)) {
-            const fieldContainer = document.getElementById('age-field-container');
-            const errorMessage = document.createElement('p');
+            fieldContainer = document.getElementById('age-field-container');
+            errorMessage = document.createElement('p');
             errorMessage.classList.add('red-text');
             errorMessage.innerText = "L'eta' inserita non è valida";
             fieldContainer.appendChild(errorMessage);
-            return;
+            return  
         }
 
         // // 4. Calcolo prezzo base
