@@ -13,54 +13,67 @@
 
 <body>
     <!-- ~ TICKET FORM  -->
-    <section id="ticket-form">
-        <!-- Collecting ticket details  -->
-        <div id="collecting-details">
-            <div id="name-field-container">
-                <label for="name">Nome e cognome</label> <br />
-                <input type="text" id="name" class="form-field">
-            </div>
-            <div id="kms-field-container">
-                <label for="kms">Chilometri</label> <br />
-                <input type="number" id="kms" class="form-field" min="5" max="200" step="5">
-            </div>
-            <div id="age-field-container">
-                <label for="age">Fascia d'et&agrave;</label>
-                <br />
-                <select id="age" class="form-field">
-                    <option value="">--</option>
-                    <option value="minor">Minorenne</option>
-                    <option value="adult">Adulto</option>
-                    <option value="over">Over 65</option>
-                </select>
-            </div>
+    <div class="container-fluid p-3">
+        <h1 class="text-center">Calcola il costo del tuo viaggio</h1>
+        <div class="container">
+            <section id="ticket-form" class="row justify-content-center">
+                <div class="col-6 bg-white rounded mb-5">
+                    <!-- Collecting ticket details  -->
+                    <div id="collecting-details" class="d-flex justify-content-evenly m-3">
+                        <div id="name-field-container">
+                            <label for="name">Nome e cognome</label> <br />
+                            <input type="text" id="name" class="form-field">
+                        </div>
+                        <div id="kms-field-container">
+                            <label for="kms">Chilometri</label> <br />
+                            <input type="number" id="kms" class="form-field" min="5" max="200" step="5">
+                        </div>
+                        <div id="age-field-container">
+                            <label for="age">Fascia d'et&agrave;</label>
+                            <br />
+                            <select id="age" class="form-field">
+                                <option value="">--</option>
+                                <option value="minor">Minorenne</option>
+                                <option value="adult">Adulto</option>
+                                <option value="over">Over 65</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Buttons -->
+                    <div id="buttons" class="m-3 text-center">
+                        <button type="button" id="generate-btn" class="m-3">Genera</button>
+                        <button type="button" id="reset-btn" class="m-3">Annulla</button>
+                    </div>
+                </div>
+            </section>
         </div>
-        <!-- Buttons -->
-        <div id="buttons">
-            <button type="button" id="generate-btn">Genera</button>
-            <button type="button" id="reset-btn">Annulla</button>
-        </div>
-    </section>
 
-    <!-- ~ TICKET QUOTE  -->
-    <section id="ticket-quote">
-        <h2>Il tuo biglietto</h2>
-        <div>
-            <p><strong>Nome passeggero:</strong><span id="passenger-name"></span></p>
+        <!-- ~ TICKET QUOTE  -->
+        <div class="container">
+            <section id="ticket-quote" class="row justify-content-center">
+                <div class="col-10 bg-white rounded">
+                    <div class="d-flex justify-content-evenly m-3">
+                        <h2>Il tuo biglietto</h2>
+                        <div>
+                            <p><strong>Nome passeggero:</strong><br /><span id="passenger-name"></span></p>
+                        </div>
+                        <div>
+                            <p><strong>Offerta:</strong><br /><span id="offer"></span></p>
+                        </div>
+                        <div>
+                            <p><strong>Codice CP:</strong><br /><span id="cp"></span></p>
+                        </div>
+                        <div>
+                            <p><strong>Carrozza:</strong><br /><span id="carriage"></span></p>
+                        </div>
+                        <div>
+                            <p><strong>Prezzo:</strong><br /><span id="price"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div>
-            <p><strong>Offerta:</strong><span id="offer"></span></p>
-        </div>
-        <div>
-            <p><strong>Codice CP:</strong><span id="cp"></span></p>
-        </div>
-        <div>
-            <p><strong>Carrozza:</strong><span id="carriage"></span></p>
-        </div>
-        <div>
-            <p><strong>Prezzo:</strong><span id="price"></span></p>
-        </div>
-    </section>
+    </div>
     <script src="script.js"></script>
 </body>
 
