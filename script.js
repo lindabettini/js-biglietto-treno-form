@@ -110,7 +110,7 @@ generateBtn.addEventListener('click', function () {
         namePlaceholder.innerText = nameValue;
         pricePlaceholder.innerText = '€' + ' ' + rate.toFixed(2);
         offerPlaceholder.innerText = rateCategory;
-        carriagePlaceholder.innerText = carNumb;
+        carriagePlaceholder.innerText = 'N.' + ' ' +carNumb;
         cpPlaceholder.innerText = cpNumb;
         // ° Rendo visibile la sezione Quote
         quoteSection.classList.add('visible');
