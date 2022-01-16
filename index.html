@@ -17,9 +17,9 @@
         <h1 class="text-center">Calcola il costo del tuo viaggio</h1>
         <div class="container">
             <section id="ticket-form" class="row justify-content-center">
-                <div class="col-6 bg-white rounded mb-5">
+                <div class="col-7 bg-white rounded mb-5">
                     <!-- Collecting ticket details  -->
-                    <div id="collecting-details" class="d-flex justify-content-evenly m-3">
+                    <div class="d-flex justify-content-evenly m-3">
                         <div id="name-field-container">
                             <label for="name">Nome e cognome</label> <br />
                             <input type="text" id="name" class="form-field">
@@ -51,23 +51,24 @@
         <!-- ~ TICKET QUOTE  -->
         <div class="container">
             <section id="ticket-quote" class="row justify-content-center">
-                <div class="col-10 bg-white rounded">
-                    <div class="d-flex justify-content-evenly m-3">
-                        <h2>Il tuo biglietto</h2>
-                        <div>
+                <div class="col-7 bg-white rounded">
+                    <div id="quote-container" class="d-flex justify-content-center m-3">
+                        <h2 class="me-3">Il tuo biglietto</h2>
+                        <div class="grey-bord ms-3 py-3 px-3">
                             <p><strong>Nome passeggero:</strong><br /><span id="passenger-name"></span></p>
                         </div>
-                        <div>
+                        <div class="grey-bord py-3 px-3">
                             <p><strong>Offerta:</strong><br /><span id="offer"></span></p>
                         </div>
-                        <div>
+                        <div class="grey-bord py-3 px-3">
                             <p><strong>Codice CP:</strong><br /><span id="cp"></span></p>
                         </div>
-                        <div>
+                        <div class="grey-bord py-3 px-3">
                             <p><strong>Carrozza:</strong><br /><span id="carriage"></span></p>
                         </div>
-                        <div>
-                            <p><strong>Prezzo:</strong><br /><span id="price"></span></p>
+                        <div class="grey-bord bord-right py-3 px-3" <p><strong>Prezzo:</strong><br /><span
+                                id="price"></span>
+                            </p>
                         </div>
                     </div>
                 </div>
